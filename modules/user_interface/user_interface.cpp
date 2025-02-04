@@ -134,7 +134,7 @@ static void userInterfaceDisplayInit()
     displayInit();
      
     displayCharPositionWrite ( 0,0 );
-    displayStringWrite( "Temperature:" );
+    displayStringWrite( "Tmp:" );
 
     displayCharPositionWrite ( 0,1 );
     displayStringWrite( "Gas:" );
@@ -162,9 +162,9 @@ static void userInterfaceDisplayUpdate()
         displayCharPositionWrite ( 4,1 );
 
         if ( gasDetectorStateRead() ) {
-            displayStringWrite( "Detected    " );
+            displayStringWrite( "D    " );
         } else {
-            displayStringWrite( "Not Detected" );
+            displayStringWrite( "ND" );
         }
 
         displayCharPositionWrite ( 6,2 );
